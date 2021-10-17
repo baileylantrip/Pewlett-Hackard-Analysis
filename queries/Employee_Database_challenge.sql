@@ -46,3 +46,29 @@ ON (e.emp_no = t.emp_no)
 WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND (de.to_date = '9999-01-01')
 ORDER BY emp_no;
+
+-- Additioal Analysis 
+SELECT DISTINCT ON(emp_no)emp_no, dept_no, to_date
+INTO dept_filter 
+FROM dept_emp
+ORDER BY emp_no ASC, to_date DESC; 
+
+SELECT un.emp_no, un.title, de.dept_no, de.to_date, du.dept_name
+INTO dept_unique
+FROM unique_titles as un
+LEFT JOIN dept_filter as de 
+ON (un.emp_no = de.emp_no)
+LEFT JOIN departments as du
+ON (de.dept_no = du.dept_no);
+
+SELECT COUNT(emp_no) AS emp_count, dept_name
+FROM dept_unique
+GROUP BY dept_name 
+ORDER BY emp_count DESC;
+
+
+SELECT COUNT (title), title 
+FROM mentorship_eligibility 
+-- INTO mentorship_titles 
+GROUP BY title 
+ORDER BY count DESC;
