@@ -24,6 +24,7 @@ Simply put, 1,549 mentors is not enough to successfully and effectively train th
 Below are 2 additional queries that could be usful in preparing for the wave of retirement: 
 
 - The table below displays the the number of retirement eligible employees within each department. Based on this analysis, we conclude that the Development, Production, and Sales departments face the greatest potential loss of staff.
+
 ![](resources/retiring_dept.png)
 
 - This next table breaks down the list of employees eligible to become a mentor by their job title. This gives insight into which roles can provide the most mentors. We see that the Senior Staff and Engineer roles have the largest amount of eligible mentors, given that those are the roles in which PH will be experiencing the most loss. While these positions do provide the most eligible mentors, it is still necessary to review the mentorship eligibility in order to meet the demand of the new generation of employees. 
